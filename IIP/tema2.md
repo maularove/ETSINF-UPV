@@ -120,6 +120,105 @@ Clases hechas por otras personas, liberías externaas, frameworks, etc.
 
 <br>
 
+## 2.2. Estructura básica de una clase
+
+### 🔹 2.2.1. Bloques
+
+- __Java__ es un lenguaje orientado a bloques (unidades de código).  
+- **Delimitadores:**  
+  - `{` : inicio del bloque  
+  - `}` : fin del bloque
+
+- **Características de un bloque:**  
+  1. Puede contener **cero o más instrucciones**.  
+  2. Las instrucciones van **separadas por `;`**.  
+  3. Se ejecutan **una tras otra**, en orden.  
+  4. Sirve para organizar el código y poder usar varias instrucciones donde normalmente se espera una sola.
+
+  💡 **Ejemplo:**
+  ```java
+    public class Ejemplo {
+    public static void main(String[] args) {
+        // Inicio del bloque del método main
+            {
+                int a = 5;   // primera instrucción
+                int b = 3;   // segunda instrucción
+                int suma = a + b;  // tercera instrucción
+                System.out.println("La suma es: " + suma); // cuarta instrucción
+            } // fin del bloque
+        }
+    }
+    ```
+
+<br>
+
+### 🔹 2.2.2. Modificadores
+
+``private`` => exclusiva del objeto e inaccesible fuera de la clase
+
+``public:`` => accesible desde fuera de la clase 
+
+<br>
+
+### 🔹 2.2.3. Atributos
+
+__Información__ propia de cada clase, declaradas como un tipo de datos determinado
+
+<br>
+
+### 🔹 2.2.4. Métodos
+
+Definen las operaciones que pueden aplicar sobre los objetos de la clase.
+<br>
+
+![Ejemplo de imagen](../resources/images/metodo.png)
+
+<br>
+
+####  Tipos de métodos
+
+Definen las operaciones que pueden aplicar sobre los objetos de la clase.
+
+``Constructores`` => crean el objeto e inicializan sus atributos
+```java
+public class Persona {
+      String nombre;
+      int edad;
+
+      // Constructor
+      public Persona(String nombre, int edad) {
+          this.nombre = nombre;
+          this.edad = edad;
+      }
+  }
+```
+
+``Modificadores`` => alteran el estado del objeto, cambiando valores de los atributos
+
+```java
+public void cambiarEdad(int nuevaEdad) {
+    this.edad = nuevaEdad;
+}
+
+// Uso
+p.cambiarEdad(26);
+```
+
+
+``Consultores`` => devuelve valor de los atributos de un objeto
+
+```java
+public int obtenerEdad() {
+    return this.edad;
+}
+
+// Uso
+int edadActual = p.obtenerEdad(); // devuelve 26
+
+```
+
+<br>
+
 ---
 
 ## 3. Instancia 🧶
@@ -132,3 +231,13 @@ Perro miPerro = new Perro();
 ```
 
 aquí ``miPerro`` es una instancia (un objeto) de la clase ``Perro``
+
+<br>
+
+---
+
+
+
+
+
+![Ejemplo de imagen](../resources/images/procesoprg.png)
