@@ -172,7 +172,7 @@ Definen las operaciones que pueden aplicar sobre los objetos de la clase.
 
 <br>
 
-####  Tipos de métodos
+#### Tipos de métodos
 
 Definen las operaciones que pueden aplicar sobre los objetos de la clase.
 
