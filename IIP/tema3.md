@@ -242,14 +242,37 @@ Después de sumar 1: -2147483648
 
 <br>
 
-### 4.4 Operadores lógicos
-
-|Secuencia de escapada|Descripción|Significado
+### 4.4 Operandos tipo boolean
+|Operador|Operación|
 |--------|-----------|
-| ``\t`` | Tabulador|
-| ``\n`` | Salto de línea | 
-|``\'`` | Comas simples |
-| ``\"`` | Comas dobles |
-| ``\\`` | barra invertida |
+| ``==`` | Igual|
+| ``!=`` | Distinto | 
+|``>`` | Mayor que |
+|``>=`` | Mayor o igual que |
+| ``<`` | Menor que |
+| ``<=`` | Menor o igual que |
+
+💡 *Ejemplo de **bucle** usando boolean (contador del 0 al 10):*
+
+```java
+if (contador > 10) {
+    seguir = false;
+}
+```
+
+<br>
+
+### 4.5 Operadores Lógicos
+|Secuencia de escapada|Descripción|Significado|
+|--------|-----------|-----------|
+| ``!`` | NOT|negación lógica|
+| ``&`` | AND |conjunción o 'y' lógica| 
+|| OR | disyunción u 'o' lógico|
+| ``^`` | Comas dobles ||
+| ``&&`` | AND curtcircuit |Si el primer operando es falso, el segundo ua no se evalu|
+| ``||`` | barra invertida ||
+
+<br>
+
 ---
 
