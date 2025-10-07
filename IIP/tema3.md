@@ -276,3 +276,56 @@ if (contador > 10) {
 
 ---
 
+## 5. Declaración de variables en Java
+
+``Variable`` => es un espacio en momeria donde se guarda un valor.
+<br>
+
+``Declarar una variable`` => decirle al programa que tipo de dato va a guardar y como se llama.
+<br>
+
+Java es un **lenguaje fuertemente tipado**, por lo tanto, todas las variables deben **declararse antes de usarse** y su tipo no puede cambiar.
+
+💡 *Ejemplo:*
+```java
+public class Circulo {
+    // Variables de instancia (atributos)
+    private double radio;
+    private String color;
+
+    // Variable de clase (compartida por todos los objetos)
+    private static int contador;
+
+    // Método con variable local
+    public void setRadio(double nuevoRadio) {
+        double radioAnterior = radio; // variable local
+        radio = nuevoRadio;
+    }
+}
+```
+
+<br>
+
+---
+
+## 6. Intercambio de valores de dos variables
+El **intercambio de valores** consiste en **cambiar el contenido** de dos variables entre sí.  
+Para hacerlo correctamente, se necesita **una variable auxiliar** que guarde temporalmente un valor.
+
+💡 *Ejemplo:*
+```java
+int a = 5;
+int b = 10;
+int aux;       // variable auxiliar
+
+aux = a;       // guardamos el valor de a
+a = b;         // a toma el valor de b
+b = aux;       // b toma el valor guardado en aux
+
+System.out.println("a = " + a + ", b = " + b);
+```
+resultado: a = 10, b = 5
+
+<br>
+
+---
