@@ -1,8 +1,6 @@
-# TEMA 2. Objetos, Clases y Programas
+# 🎯 TEMA 2. Objetos, Clases y Programas
 
-<br>
-
-## 1. Objeto 📦 
+## 1. 📦Objeto  
 Agrupación de datos y acciones entre sí
 
 - los datos se llaman __atributos__ 
@@ -12,8 +10,8 @@ Agrupación de datos y acciones entre sí
 <br>
 
 💡 *Ejemplo:*
-<br>
-imagina que representaras un perro en un programa:
+
+Imagina que representaras un perro en un programa:
 
 - datos (atributos): nombre, raza, edad
 
@@ -23,14 +21,14 @@ imagina que representaras un perro en un programa:
 
 ---
 
-## 2. Clase 🧩 
+## 2. 🧩 Clase  
 Es como el _molde_ o la _plantilla_ que se usa para crear objetos
 
 <br>
 
 💡 *Ejemplo:*
-<br>
-retomando el ejemplo del perro, una clase no sería un perro en sí, sino la __definición general__ de lo que es 
+
+Retomando el ejemplo del perro, una clase no sería un perro en sí, sino la **definición general** de lo que es. 
 
 <br>
 
@@ -40,10 +38,9 @@ Objetos: ``perro1``, ``perro2``, ``perro3``
 
 <br>
 
-## 2.1. Tipos de clases en Java
+## 2.1. 📝 Tipos de clases en Java
 
 Las clases en Java se pueden clasificar según **cómo se usan** y según **quién las crea**.
-
 
 ### 🔹 2.1.1. Según su estructura y uso
 
@@ -79,7 +76,7 @@ public class App {
     }
 }
 ```
-Si no tiene ``main``, no puede inciarse la ejecución.
+Si no tiene `main`, no puede iniciarse la ejecución.
 
 <br>
 
@@ -111,13 +108,13 @@ Vienen en las bibliotecas estándar de Java
 💡 *Ejemplo:* ``String``, ``Scanner``, ``ArrayList``
 
 #### ✅ Clases de terceros
-Clases hechas por otras personas, liberías externaas, frameworks, etc.
+Clases hechas por otras personas, librerías externas, frameworks, etc.
 
 💡 *Ejemplo:* ``Gson``, ``JUnit``, ``Spring``, ``Apache Commons``
 
 <br>
 
-## 2.2. Estructura básica de una clase
+## 2.2. 🏗️ Estructura básica de una clase
 
 ### 🔹 2.2.1. Bloques
 
@@ -151,15 +148,15 @@ Clases hechas por otras personas, liberías externaas, frameworks, etc.
 
 ### 🔹 2.2.2. Modificadores
 
-``private`` => exclusiva del objeto e inaccesible fuera de la clase
+`private` => exclusiva del objeto e inaccesible fuera de la clase
 
-``public:`` => accesible desde fuera de la clase 
+`public` => accesible desde fuera de la clase 
 
 <br>
 
 ### 🔹 2.2.3. Atributos
 
-__Información__ propia de cada clase, declaradas como un tipo de datos determinado
+**Información** propia de cada clase, declaradas como un tipo de datos determinado
 
 <br>
 
@@ -172,11 +169,11 @@ Definen las operaciones que pueden aplicar sobre los objetos de la clase.
 
 <br>
 
-#### Tipos de métodos
+#### 🔧 Tipos de métodos
 
 Definen las operaciones que pueden aplicar sobre los objetos de la clase.
 
-``Constructores`` => crean el objeto e inicializan sus atributos
+**Constructores** => crean el objeto e inicializan sus atributos
 ```java
 public class Persona {
       String nombre;
@@ -190,7 +187,7 @@ public class Persona {
   }
 ```
 
-``Modificadores`` => alteran el estado del objeto, cambiando valores de los atributos
+**Modificadores** => alteran el estado del objeto, cambiando valores de los atributos
 
 ```java
 public void cambiarEdad(int nuevaEdad) {
@@ -202,7 +199,7 @@ p.cambiarEdad(26);
 ```
 
 
-``Consultores`` => devuelve valor de los atributos de un objeto
+**Consultores** => devuelve valor de los atributos de un objeto
 
 ```java
 public int obtenerEdad() {
@@ -215,11 +212,10 @@ int edadActual = p.obtenerEdad(); // devuelve 26
 
 <br>
 
-💡*Ejemplo más común de método:*
-<br>
+💡 *Ejemplo más común de método:*
 
-__método main:__
-- marca _punto de incio_ de ejecución del programa
+**Método main:**
+- Marca **punto de inicio** de ejecución del programa
 ```java
 public class NomDeLaClasse {
     public static void main(String[] args) {
@@ -236,26 +232,26 @@ public class NomDeLaClasse {
 Cuando creas un objeto a partir de una clase
 
 💡 *Ejemplo:*
-```js
+```java
 Perro miPerro = new Perro();
 ```
 
-aquí ``miPerro`` es una instancia (un objeto) de la clase ``Perro``
+Aquí `miPerro` es una instancia (un objeto) de la clase `Perro`
 
 <br>
 
 ---
 
-## 4. Operadores 🧶
+## 4. ⚙️ Operadores
 
-### 4.1 New
-se usa para crear un objeto de clase
+### 4.1 🆕 New
+Se usa para crear un objeto de clase
 
-```js
+```java
 Perro miPerro = new Perro();
 ```
 
-### 4.2 Operador punto
+### 4.2 🔗 Operador punto
 Selecciona el atributo o método que quieras
 
 ```java
@@ -272,26 +268,28 @@ miPerro.ladrar();
 
 ---
 
-## 5. Errores de compilación y ejecución en Java
+## 5. 🚨 Errores de compilación y ejecución en Java
 ### 🧭 Orden real del proceso en Java
 
 1️⃣ **Escribes el código** → `.java`  
 2️⃣ **Compilas** → se genera `.class`  
 3️⃣ **Ejecutas** → la JVM corre el programa
 
-### ❗¿Cuándo aparece cada tipo de error?
+<br>
 
-🔹 **Errores de compilación**  
-Aparecen **al intentar compilar**, antes de que se genere el archivo `.class`.
-
-🔹 **Errores de ejecución**  
-Surgen **después de compilar**, cuando el programa ya se está ejecutando.
+> ### ❗ ¿Cuándo aparece cada tipo de error?
+> 
+> 🔹 **Errores de compilación**  
+> Aparecen **al intentar compilar**, antes de que se genere el archivo `.class`.
+> 
+> 🔹 **Errores de ejecución**  
+> Surgen **después de compilar**, cuando el programa ya se está ejecutando.
 
 <br>
 
 ---
 
-## 6. Organización de clases Java en librerías (packages) 📘
+## 6. 📘 Organización de clases Java en librerías (packages) 
 - Un paquete (package), es como una __carpeta__ en donde guardas clases
 - Facilita la organización y el uso de las clases ya definidas y nuevas
 
@@ -299,7 +297,7 @@ Surgen **después de compilar**, cuando el programa ya se está ejecutando.
 
 ---
 
-## 7. Herencia. Jerarquía de clases Java  🧬 
+## 7. 🧬 Herencia. Jerarquía de clases Java   
 ### ✅ ¿Qué es la herencia?
 Es un mecanismo que permite **crear nuevas clases** a partir de otras ya existentes, reutilizando su código.
 
@@ -358,5 +356,3 @@ public class Main {
 <br>
 
 ---
-
-

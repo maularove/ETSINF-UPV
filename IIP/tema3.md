@@ -1,6 +1,6 @@
-# Tema 3. Variables: Definición, tipos y uso en Java
+# 📊 Tema 3. Variables: Definición, tipos y uso en Java
 
-## 1. Variables en programación
+## 1. 🔧 Variables en programación
 Las **variables** son espacios en memoria donde guardamos información (datos, resultados, etc...) para usarla durante la ejecución de un programa.
 
 ### 🔹1.1 Tipo de dato
@@ -15,8 +15,6 @@ int edad = 20;     // solo admite números enteros
 String nombre = "Ana";  // solo texto
 ```
 
-<br>
-
 ### 🔹1.2 Definición de variables
 Una variable siempre debe definirse antes de usarse
 
@@ -25,8 +23,6 @@ Una variable siempre debe definirse antes de usarse
 int x;        // definir
 x = 5;        // usar
 ```
-
-<br>
 
 ### 🔹1.3 Ámbito (scope)
 Parte del programa donde una variable **existe** y puede **usarse**
@@ -42,16 +38,14 @@ public class Ejemplo {
 }
 ```
 
-<br>
-
 ---
 
-## 2. Variables según rol y ámbito de definición  🔑 
+## 2. 🔑 Variables según rol y ámbito de definición 
 
 ### 🔹2.1 Variables o Atributos de instancias
 - **Pertenecen a cada objeto creado**.
 - Cada objeto tiene su **propia copia** de esos atributos.
-- Se accede con el nomnre del objeto (`objeto.atributo`)
+- Se accede con el nombre del objeto (`objeto.atributo`)
 
 💡 *Ejemplo:*
 ```java
@@ -124,7 +118,7 @@ class Calculadora {
 
 ---
 
-## 3. Variables según los tipos de datos 🗂️
+## 3. 🗂️ Variables según los tipos de datos
 
 ### 🔹3.1 Tipos primitivos (básicos) 
 - No se definen a partir de otros
@@ -136,8 +130,6 @@ int edad = 25;       // número entero
 double precio = 9.99; // número decimal
 boolean activo = true; // verdadero/falso
 ```
-
-<br>
 
 ### 🔹3.2 Tipos de referencia (complejos o estructurados)
 - Se construyeron **agrupando datos**, ya sean del mismo tipo o diferentes.
@@ -153,15 +145,11 @@ int[] numeros = {1, 2, 3};   // array (estructura)
 Perro p = new Perro();       // tipo definido por el usuario
 ```
 
-<br>
-
 ---
 
-## 4. Tipos de datos
+## 4. 📋 Tipos de datos
 
 ![Ejemplo de imagen](../resources/images/tablaTipoDatos.png)
-
-<br>
 
 ```java
 byte edad = 25;  // números enteros pequeños (-128 a 127)
@@ -185,7 +173,7 @@ String nombre = "Ana";  // cadenas de texto (objeto, no primitivo)
 
 <br>
 
-### 4.1 Operadores aritméticos
+### 🔹4.1 Operadores aritméticos
 
 |Operador|Operación|
 |--------|-----------|
@@ -204,7 +192,7 @@ String nombre = "Ana";  // cadenas de texto (objeto, no primitivo)
 
 <br>
 
-### 4.2 Desbordamiento
+### 🔹4.2 Desbordamiento
 - Ocurre cuando un número **excede el rango** que puede almacenar un tipo de dato. 
 - En Java, cada tipo numérico (`byte`, `short`, `int`, `long`, `float`, `double`) tiene un límite máximo y mínimo. 
 - Si intentas almacenar un número fuera de rango, el valor da la vuelta y cambia a un valor inesperado
@@ -230,19 +218,19 @@ Después de sumar 1: -2147483648
 
 <br>
 
-### 4.3 Secuencias de escapada
+### 🔹4.3 Secuencias de escapada
 
 |Secuencia de escapada|Descripción|
 |--------|-----------|
 | ``\t`` | Tabulador|
 | ``\n`` | Salto de línea | 
-|``\'`` | Comas simples |
-| ``\"`` | Comas dobles |
-| ``\\`` | barra invertida |
+|``\'`` | Comillas simples |
+| ``\"`` | Comillas dobles |
+| ``\\`` | Barra invertida |
 
 <br>
 
-### 4.4 Operandos tipo boolean
+### 🔹4.4 Operadores de comparación
 |Operador|Operación|
 |--------|-----------|
 | ``==`` | Igual|
@@ -262,27 +250,18 @@ if (contador > 10) {
 
 <br>
 
-### 4.5 Operadores Lógicos
-|Secuencia de escapada|Descripción|Significado|
-|--------|-----------|-----------|
-| ``!`` | NOT|negación lógica|
-| ``&`` | AND |conjunción o 'y' lógica| 
-|| OR | disyunción u 'o' lógico|
-| ``^`` | Comas dobles ||
-| ``&&`` | AND curtcircuit |Si el primer operando es falso, el segundo ua no se evalu|
-| ``||`` | barra invertida ||
+### 4.5 🧠 Operadores Lógicos
+![Ejemplo de imagen](../resources/images/operadores.png)
 
 <br>
 
 ---
 
-## 5. Declaración de variables en Java
+## 5. 📝 Declaración de variables en Java
 
-``Variable`` => es un espacio en momeria donde se guarda un valor.
-<br>
+`Variable` => es un espacio en memoria donde se guarda un valor.
 
-``Declarar una variable`` => decirle al programa que tipo de dato va a guardar y como se llama.
-<br>
+`Declarar una variable` => decirle al programa qué tipo de dato va a guardar y cómo se llama.
 
 Java es un **lenguaje fuertemente tipado**, por lo tanto, todas las variables deben **declararse antes de usarse** y su tipo no puede cambiar.
 
@@ -308,7 +287,7 @@ public class Circulo {
 
 ---
 
-## 6. Intercambio de valores de dos variables
+## 6. 🔄 Intercambio de valores de dos variables
 El **intercambio de valores** consiste en **cambiar el contenido** de dos variables entre sí.  
 Para hacerlo correctamente, se necesita **una variable auxiliar** que guarde temporalmente un valor.
 
@@ -324,8 +303,9 @@ b = aux;       // b toma el valor guardado en aux
 
 System.out.println("a = " + a + ", b = " + b);
 ```
-resultado: a = 10, b = 5
-
-<br>
+**Resultado:**
+```
+a = 10, b = 5
+```
 
 ---

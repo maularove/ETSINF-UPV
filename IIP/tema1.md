@@ -1,8 +1,5 @@
 # ✅ TEMA 1. Problemas, Algoritmos y Programas
-
-<br>
-
-## 1. ¿Qué es Programar? 🖥️
+## 1. 🖥️ ¿Qué es Programar?
 
 **Programar** es el proceso de **resolver problemas usando un ordenador**.
 
@@ -10,7 +7,7 @@ Para que un ordenador pueda resolver algo, primero necesitamos decirle **cómo h
 
 <br>
 
-## 2. Algoritmo 🔄
+## 2. 🔄 Algoritmo 
 
 Un **algoritmo** es una secuencia de pasos (acciones) que debes seguir para resolver un problema.
 
@@ -25,7 +22,7 @@ Eso es un algoritmo, simplemente no en código.
 
 <br>
 
-## 3. Procesador ⚙️
+## 3. ⚙️ Procesador 
 
 El **procesador** es una entidad (normalmente una máquina) capaz de ejecutar las acciones que le indiques.
 
@@ -39,7 +36,7 @@ No le puedes pedir a una calculadora que reproduzca música porque no tiene esa 
 
 <br>
 
-## 4. Fases y Herramientas de la Programación ✅
+## 4. ✅ Fases y Herramientas de la Programación
 
 Programar no es solo escribir código. Se divide en dos grandes fases:
 
