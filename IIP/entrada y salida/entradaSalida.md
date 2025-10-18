@@ -137,3 +137,32 @@ public class EjemploScannerBasico {
 <br>
 
 ---
+
+## 3. ✅ Diferencia entre `print`, `println` y `printf`
+
+| Método    | ¿Qué hace? | ¿Agrega salto de línea? | ¿Permite formato? |
+|-----------|-------------|--------------------------|--------------------|
+| `print`   | Muestra texto tal cual               | ❌ No              | ❌ No               |
+| `println` | Muestra texto y luego baja de línea  | ✅ Sí              | ❌ No               |
+| `printf`  | Muestra texto con formatos            | ❌ No (a menos que uses `%n`) | ✅ Sí |
+
+<br>
+
+💡 *Ejemplo:*
+```java
+public class DiferenciasPrint {
+    public static void main(String[] args) {
+        System.out.print("Hola");
+        System.out.print(" Mundo");
+        
+        System.out.println(" 👋");
+        System.out.println("Esto va en otra línea");
+
+        System.out.printf("Tengo %d años y me llamo %s%n", 25, "Lucía");
+    }
+}
+```
+
+<br>
+
+---
