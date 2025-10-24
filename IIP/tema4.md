@@ -143,3 +143,20 @@ public Coche() {
 <br>
 
 ---
+
+```java
+public class EjemploIntegerBoolean {
+    public static void main(String[] args) {
+        Integer x = 15;
+        Integer y = 10;
+
+        boolean resultado1 = x.compareTo(y) > 0;  // ¿x mayor que y?
+        boolean resultado2 = x.compareTo(y) < 0;  // ¿x menor que y?
+        boolean resultado3 = x.compareTo(15) == 0; // ¿son iguales?
+
+        System.out.println(resultado1); // true
+        System.out.println(resultado2); // false
+        System.out.println(resultado3); // true
+    }
+}
+```

@@ -4,13 +4,13 @@ public class math {
     public static void main(String[] args) {
 
         // Scanner para leer entrada del usuario
-        Scanner sc = new Scanner(System.in);
+        Scanner pepito = new Scanner(System.in);
 
         // Introducir datos
         System.out.println("Ingrese un numero: ");
-        double a = sc.nextDouble();
+        double a = pepito.nextDouble();
         System.out.println("Ingrese otro numero: ");
-        double b = sc.nextDouble();
+        double b = pepito.nextDouble();
 
         // potencia
         double potencia = Math.pow(a, b);
@@ -21,22 +21,22 @@ public class math {
         // máximo y mínimo
         double maximo = Math.max(a, b);
         double minimo = Math.min(a, b);
-        double redondeo = Math.round(1.6);
+        double redondeo = Math.round(1.2);
 
         // redondea hacia abajo
         double redondeoBajo = Math.floor(1.6);
 
-        // redondea hacia abajo
+        // redondea hacia alto
         double redondeoAlto = Math.ceil(1.2);
 
         // numero random
-        double random = Math.random();
+        double random = (int) (2 + Math.random() * 8);
 
         // valor absoluto
         double absoluto = Math.abs(-5);
 
         // número pi
-        double pi = Math.PI;
+        double pi = (int) (Math.PI);
 
         // numero de Euler
         double e = Math.E;
@@ -53,6 +53,6 @@ public class math {
         System.out.println("El valor absoluto es: " + absoluto);
         System.out.println("El numero pi es: " + pi);
         System.out.println("El numero euler es: " + e);
-        sc.close();
+        pepito.close();
     }
 }
