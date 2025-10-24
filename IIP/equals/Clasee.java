@@ -6,18 +6,18 @@ public class Clasee {
     private String team;
     private String role;
 
-    public Clasee(String n, String team, String role) {
-        this.name = n;
-        this.team = team;
-        this.role = role;
+    public Clasee(String n, String t, String r) {
+        name = n;
+        team = t;
+        role = r;
     }
 
     // sobreescribir equals para comparar el contenido
     @Override
     public boolean equals(Object o) {
         return o instanceof Clasee
-                && name.equals(((Clasee) o).name)
-                && team.equals(((Clasee) o).team)
-                && role.equals(((Clasee) o).role);
+                && this.name == (((Clasee) o).name)
+                && this.team == (((Clasee) o).team)
+                && this.role == (((Clasee) o).role);
     }
 }

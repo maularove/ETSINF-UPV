@@ -15,6 +15,5 @@ public class Use {
         // System.out.println(eq1.equals(eq3));
 
         System.out.println(dani.equals(guijarro));
-
     }
 }
