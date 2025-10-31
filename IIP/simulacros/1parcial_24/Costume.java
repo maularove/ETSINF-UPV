@@ -12,13 +12,13 @@ public class Costume {
     public double weight, price;
     public Date releaseDate;
 
-    public Costume(String n, int t, String s, double w, double p, int d, int m, int y) {
-        name = n;
-        type = t;
-        size = s;
-        weight = w;
-        price = p;
-        // releaseDate = new Date(d, m ,y);
+    public Costume(String name, int type, String size, double weight, double price, int day, int month, int year) {
+        this.name = name;
+        this.type = type;
+        this.size = size;
+        this.weight = weight;
+        this.price = price;
+        // this.releaseDate = new Date(day, month, year);
     }
 
     public Costume() {
@@ -32,5 +32,39 @@ public class Costume {
 
     public double getPrice() {
         return price;
+    }
+
+    public void setPrice(double newPrice) {
+        price = newPrice;
+    }
+
+    public boolean isLightWeight() {
+        return weight > 0.1 && weight < 1.0;
+    }
+
+    /* ----------------------------------------------------------- */
+
+    // public boolean isRealeasedBefore(Costume other) {
+    // return this.releaseDate.compareTo(other.releaseDate) < 0;
+    // }
+
+    /* ----------------------------------------------------------- */
+
+    // Metodo equals, que sobrescribe el de Object y
+    // comprueba si un Costume (this) es igual a otro, en concreto,
+    // si ambos disfraces tienen el mismo nombre y el mismo tipo
+
+    public boolean equals(Object o) {
+        return o instanceof Costume
+                && this.name.equals(((Costume) o).name)
+                && this.type == (((Costume) o).type);
+    }
+
+    /* ----------------------------------------------------------- */
+
+    public String toString(String answer) {
+        double priceRounded = Math.round(price);
+        return answer = this.name + ". " + "Release date: "
+                + releaseDate + ". Price: " + priceRounded;
     }
 }
