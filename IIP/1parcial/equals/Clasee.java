@@ -16,7 +16,7 @@ public class Clasee {
     @Override
     public boolean equals(Object o) {
         return o instanceof Clasee
-                && this.name == (((Clasee) o).name)
+                && this.name.equals(((Clasee) o).name)
                 && this.team == (((Clasee) o).team)
                 && this.role == (((Clasee) o).role);
     }
