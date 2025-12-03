@@ -1,6 +1,6 @@
 # 6. Estructura de control: Iteración
 
-## 🟦 ¿Qué es un bucle?
+## ¿Qué es un bucle?
 Un bucle ejecuta un bloque de código repetidamente.
 <br>
 
@@ -99,7 +99,7 @@ Un bucle que repite instrucciones mientras la condición sea verdadera.
 
 Ideal cuando **no conoces por adelantado cuántas veces se repetirá**.
 
-## 6.2.1. 🟦 Sintaxis del `for`
+## 6.2.1. 🟦 Sintaxis del `while`
 ```java
 int i = 1;
 
@@ -125,7 +125,17 @@ while (i <= 5) {
 }
 ```
 
-## 6.1.3. 🟦 Usos típicos del `while`
+### 🧪 ejemplo alternativa (do while)
+```java
+int i = 1;
+
+do {
+    System.out.println(i);
+    i++;
+} while (i <= 5);
+```
+
+## 6.2.2. 🟦 Usos típicos del `while`
 ✔️ Validación de datos del usuario
 <br>
 
@@ -139,5 +149,93 @@ while (i <= 5) {
 <br>
 
 ✔️ Situaciones donde la condición puede cambiar por factores externos
+
 <br>
 
+### 🧪 ejemplo básico: contar del 1 al 5
+```java
+String comando = teclado.nextLine();
+
+while (!comando.equals("salir")) {
+    System.out.println("Has escrito: " + comando);
+    comando = teclado.nextLine();
+}
+```
+
+<br>
+
+---
+
+## 6.3 Diferencias entre `for` y `while`
+
+`for` => se usa cuando hay una repetición controlada, con contador o número de interacciones conocido.
+<br>
+
+Ejemplos:
+> - repetir algo exaxtamente 10 veces
+> - recorrer un array con índices
+> - sumar números del 1 al 100
+> - ejecutar un algoritmo paso a paso (bucle con control estricto).
+<br>
+
+👉 El for es más seguro.
+
+<br>
+
+`while` => se usa cuando hay una repetición incontrolada, dependiente de una condición que no sabes cuando se cumplirá.
+<br>
+
+Ejemplos:
+> - pedir datos hasta que el usuario introduzca algo válido.
+> - leer un archivo hasta que se acabe.
+> - esperar que el servidor responda.
+> - repetir mientras haya conexión.
+
+<br>
+
+👉 El while es más flexible.
+
+<br>
+
+### 🧪 Ejemplo real para entenderlo bien
+### Situación 1: recorrer una lista de estudiantes
+```java
+for (int i = 0; i < estudiantes.length; i++) {
+    System.out.println(estudiantes[i]);
+}
+```
+
+Esto con `while` sería:
+```java
+int i = 0;
+while (i < estudiantes.length) {
+    System.out.println(estudiantes[i]);
+    i++;
+}
+```
+
+Funciona igual, pero el `for` es más claro, ordenador y menos propenso a errores.
+
+<br>
+
+### 🧪 Situación 2: pedir al usuario una nota válida
+
+```java
+int nota = teclado.nextInt();
+
+while (nota < 0 || nota > 10) {
+    System.out.println("Nota inválida. Introduce otra:");
+    nota = teclado.nextInt();
+}
+```
+
+Hacer esto con `for` sería absurdo:
+```java
+for (int nota = teclado.nextInt();
+     nota < 0 || nota > 10;
+     nota = teclado.nextInt()) {
+     ...
+}
+```
+
+Aquí el `while` es **más natural y expresivo**.
