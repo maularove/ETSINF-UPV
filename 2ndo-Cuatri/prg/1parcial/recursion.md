@@ -217,7 +217,9 @@ public static int factorialIter(int n) {
 }
 ```
 
-`Iterativa` => memoria constane
+`Iterativa` => memoria constante
+<br>
+
 `Recursiva` => memoria depende de n
 
 <br>
@@ -420,4 +422,4 @@ Pero:
 - A veces la recursión es más clara
 - A veces la iteración es más eficiente
 
-Sob alternativas y complementarias
+Son alternativas y complementarias
