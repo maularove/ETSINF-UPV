@@ -66,9 +66,7 @@ Si el rango no es máximo → no es invertible.
 
 ## Inversa con Gauss-Jordan
 Construimos:
-$$
-[A \mid I]
-$$
+$$[A \mid I]$$
 
 y aplicamos `rref`.
 ```js
@@ -79,9 +77,7 @@ A1 = [A, eye(3,3)];
 rref(A1)
 ```
 Si queda:
-$$
-[I \mid A^{-1}]
-$$
+$$[I \mid A^{-1}]$$
 
 entonces A es invertible.
 
@@ -94,9 +90,7 @@ ans(:,4:6)
 
 ## Cuándo una matriz no es invertible
 Si tras rref la izquierda NO es identidad:
-$$
-[I \mid A^{-1}]
-$$
+$$[I \mid A^{-1}]$$
 
 entonces no existe inversa.
 
@@ -105,9 +99,7 @@ entonces no existe inversa.
 
 ## Descomposición LU
 Escribir:
-$$
-A = LU
-$$
+$$A = LU$$
 
 donde: 
 - L → triangular inferior
@@ -151,23 +143,15 @@ Debe dar A.
 
 ## Resolución de sistemas con LU
 Queremos resolver:
-$$
-Ax = b
-$$
+$$Ax = b$$
 
 Como:
-$$
-A = LU
-$$
+$$A = LU$$
 
 entonces:
-$$
-LUx = b
-$$
+$$LUx = b$$
 Definimos:
-$$
-Ux = y
-$$
+$$Ux = y$$
 y resolvemos:
 
 1. Ly=b
