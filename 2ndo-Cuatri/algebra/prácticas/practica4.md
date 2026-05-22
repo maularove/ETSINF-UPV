@@ -2,9 +2,10 @@
 
 ## Matriz Inversa
 Dada una matriz cuadrada 𝐴, su inversa es la $A^{-1}$
-$$
+```math
 AA^{-1} = I
-$$
+```
+
 donde I es la matriz identidad.
 
 ## Calcular inversa con `inv`
@@ -66,7 +67,9 @@ Si el rango no es máximo → no es invertible.
 
 ## Inversa con Gauss-Jordan
 Construimos:
-$$[A \mid I]$$
+```math
+[A \mid I]
+```
 
 y aplicamos `rref`.
 ```js
@@ -77,7 +80,9 @@ A1 = [A, eye(3,3)];
 rref(A1)
 ```
 Si queda:
-$$[I \mid A^{-1}]$$
+```math
+[I \mid A^{-1}]
+```
 
 entonces A es invertible.
 
@@ -90,7 +95,9 @@ ans(:,4:6)
 
 ## Cuándo una matriz no es invertible
 Si tras rref la izquierda NO es identidad:
-$$[I \mid A^{-1}]$$
+```math
+[I \mid A^{-1}]
+```
 
 entonces no existe inversa.
 
@@ -99,7 +106,9 @@ entonces no existe inversa.
 
 ## Descomposición LU
 Escribir:
-$$A = LU$$
+```math
+A =  LU
+```
 
 donde: 
 - L → triangular inferior
@@ -129,9 +138,10 @@ Entonces:
 ```js
 [L,U,P] = lu(A)
 ```
-$$
+
+```math
 PA = LU
-$$
+```
 
 Comprobación:
 ```js
@@ -143,15 +153,23 @@ Debe dar A.
 
 ## Resolución de sistemas con LU
 Queremos resolver:
-$$Ax = b$$
+```math
+Ax = b
+```
 
 Como:
-$$A = LU$$
+```math
+A = LU
+```
 
 entonces:
-$$LUx = b$$
+```math
+LUx = b
+```
 Definimos:
-$$Ux = y$$
+```math
+Ux = y
+```
 y resolvemos:
 
 1. Ly=b
@@ -178,16 +196,18 @@ x =
 ---
 
 ## Determinantes de LU
-$$
+```math
 \det(A) = \det(L)\det(U)
-$$
+```
+
 
 ___Importante:___
 <br>
 Si U es triangular:
-$$
+```math
 \det(U) = \text{producto de la diagonal}
-$$
+```
+
 
 ```js
 A = [0 2 3; -4 6 0; 2 -5 5];
